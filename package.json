@@ -12,9 +12,50 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": "Joshua Pemberton <joshp2865@gmail.com>",
+  "author": "Bounce Radio",
   "license": "MIT",
-  "config": {},
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "Jxrdd",
+              "name": "WinB"
+            },
+            "prelease": true,
+            "draft": true
+          }
+        }
+      ],
+      "packagerConfig": {
+        "name": "Bounce",
+        "icon": "src/imgs/logo"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip"
+        },
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "bounce_application"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "icon": "src/imgs/logo.icns"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
   "dependencies": {
     "discord-rich-presence": "^0.0.8",
     "electron-squirrel-startup": "^1.0.0",
@@ -33,10 +74,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AthrCC/bounce-application.git"
+    "url": "git+https://github.com/Jxrdd/WinB.git"
   },
   "bugs": {
-    "url": "https://github.com/AthrCC/bounce-application/issues"
+    "url": "https://github.com/Jxrdd/WinB/issues"
   },
   "homepage": "https://github.com/AthrCC/bounce-application#readme"
 }

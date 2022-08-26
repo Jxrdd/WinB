@@ -3,7 +3,7 @@ const path = require('path')
 const fetch = require('node-fetch')
 const client = require('discord-rich-presence')('960308016190750730')
 const time = Math.floor(Date.now() / 1000)
-const server = "https://win-bounce.vercel.app/"
+const server = "https://win-bounce.vercel.app"
 const url = `${server}/update/${process.platform}/${app.getVersion()}`
 
 
